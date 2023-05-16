@@ -1,0 +1,169 @@
+<!doctype html>
+<head>
+<script>
+function check()
+{
+var first=document.getElementById("first").value;
+var second=document.getElementById("second").value;
+var name=first.concat(second);
+document.getElementById("bid").innerHTML=first.toUpperCase()+"❤️"+second.toUpperCase();
+
+var namreg=/[love]/g;
+var lcount=0;
+var namereg=/[true]/g;
+var tcount=0;
+for(var i=0;i<name.length;i++)
+ {
+     if((name.charAt(i)).match(namereg))
+          {
+             tcount=tcount+1;
+           }
+}
+for(var i=0;i<name.length;i++)
+ {
+     if((name.charAt(i)).match(namreg))
+          {
+             lcount=lcount+1;
+           }
+
+}
+var nam1=tcount.toString();
+var nam2=lcount.toString();
+var scor=nam1.concat(nam2);
+var score=parseInt(scor);
+
+
+if(score<=10 || score>=90){
+document.getElementById("pid").innerHTML="YOU GUYS ARE MADE FOR EACH OTHER";
+
+}
+else if(score>= 40 && score<=50)
+{
+document.getElementById("pid").innerHTML="U GUYS ARE GOOD TOGETHER";
+
+}
+else
+{
+document.getElementById("pid").innerHTML=
+"JUST RECONSIDER IT";
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+}
+</script>
+<style>
+body
+{
+background-image: url("tulips.jpg");
+background-size: 1300px 600px;
+ 
+
+  
+}
+h1
+{
+font-family:"Brush Script m7", Cursive; }
+table{
+margin-right:250px;
+}
+
+form
+{
+font-family:"Brush Script m7", Cursive; 
+padding:5px;
+
+
+}
+input{
+width:100%;
+border:none;
+border-bottom:2px solid black;
+background-color:MistyRose;
+
+}
+.button {
+  display: inline-block;
+  border-radius: 8px;
+  background-color: black;
+  border: none;
+  color:white;
+  text-align: center;
+  font-size: 14px;
+font-family:"Brush Script m7", Cursive; 
+  padding: 5px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 3px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+
+</head>
+<body >
+
+<br>
+<center><h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLOVE CALCULATOR❤️</h1><center>
+<form align="center"><br><br>
+<table align="center">
+
+<tr><th>YOU❤️:</th><td><input type="text" id="first"></td></tr>
+<tr><th></th><td><img src="love3.png" width=50px height=50px>
+</td></tr><br><tr><th>UR LOVE❤️:</th><td><input type="text" id="second"></td></tr><br>
+<tr><td></td><td></td></tr><br>
+<tr><td></td><td><button type="button" onclick="check()"  class="button"
+ style="vertical-align:middle"><span>FLAMES❤️</span></button></td></tr>
+
+</table>
+</form>
+
+<br><br></br>
+<table align="right">
+<tr><th>
+<b><p id="bid">   </p></pre></b></th></tr>
+<tr><th><b><p id="pid"></p></b></th></tr>
+</table>
+
+
+
+
+
+
+</body>
